@@ -25,7 +25,7 @@ const TeacherRegisterarion = () => {
               <div className="card-header">
                 <h3>Teacher Registeration</h3>
               </div>
-              <div className="card-body">
+              <div className="card-body">  
                 <form>
                   <div className="form-group my-2">
                     <label htmlFor="name">Name</label>
