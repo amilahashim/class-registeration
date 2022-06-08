@@ -1,8 +1,21 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+ import  axios from 'axios'
 const TeacherRegisterarion = () => {
   const [cnic, setCnic] = useState("");
+  const [name ,setName] =useState("");
+  const [gender, setGender] =useState("");
+  const [phoneno, setPhoneNo] =useState("");
+  const [city, setCity] =useState("");
+  const [age, setAge] =useState("");
+  const [description, setDescription] =useState("");
   // React Select Styles
-
+//  useEffect(()=>{
+// axios.get(name.json)
+// .then(response =>{
+//   console.log(response) 
+//   setName(response.data)
+// })
+//  })
   return (
     <div className="container my-5">
       <div className="row">
@@ -22,6 +35,9 @@ const TeacherRegisterarion = () => {
                       name="name"
                       id="name"
                       placeholder="Enter Name"
+                
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
                   </div>
                   <div className="form-group my-2">
@@ -33,6 +49,8 @@ const TeacherRegisterarion = () => {
                         name="flexRadioDefault"
                         id="flexRadioDefault1"
                         checked
+                        value={gender}
+                        onChange={(e) => setGender(e.target.value)}
                       />
                       <label
                         className="form-check-label"
@@ -70,6 +88,8 @@ const TeacherRegisterarion = () => {
                         id="phone_number"
                         placeholder="Enter Phone Number"
                         type="number"
+                        value={phoneno}
+                        onChange={(e) => setPhoneNo(e.target.value)}
                       />
                     </div>
                   </div>
@@ -80,6 +100,8 @@ const TeacherRegisterarion = () => {
                       name="city"
                       type="text"
                       placeholder="Enter City Name"
+                      value={city}
+                      onChange={(e) => setCity(e.target.value)}
                     />
                   </div>
                   <div className="form-group my-2">
@@ -89,6 +111,8 @@ const TeacherRegisterarion = () => {
                       name="age"
                       type="number"
                       placeholder="Enter Teacher Age"
+                      value={age}
+                      onChange={(e) => setAge(e.target.value)}
                     />
                   </div>
                   <div className="form-group my-2">
@@ -99,6 +123,8 @@ const TeacherRegisterarion = () => {
                       name="description"
                       id="description"
                       placeholder="Enter Description"
+                      value={description}
+                      onChange={(e) => setDescription(e.target.value)}
                     />
                   </div>
                   <div className="form-group my-2">
